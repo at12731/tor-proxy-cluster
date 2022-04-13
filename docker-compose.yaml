@@ -21,66 +21,21 @@ services:
       - tor7
       - tor8
       - tor9
-  tor0:
+  tor0: &tor
     image: dperson/torproxy
     networks:
       - tor-network
     expose:
       - "8118"
-  tor1:
-    image: dperson/torproxy
-    networks:
-      - tor-network
-    expose:
-      - "8118"
-  tor2:
-    image: dperson/torproxy
-    networks:
-      - tor-network
-    expose:
-      - "8118"
-  tor3:
-    image: dperson/torproxy
-    networks:
-      - tor-network
-    expose:
-      - "8118"
-  tor4:
-    image: dperson/torproxy
-    networks:
-      - tor-network
-    expose:
-      - "8118"
-  tor5:
-    image: dperson/torproxy
-    networks:
-      - tor-network
-    expose:
-      - "8118"
-  tor6:
-    image: dperson/torproxy
-    networks:
-      - tor-network
-    expose:
-      - "8118"
-  tor7:
-    image: dperson/torproxy
-    networks:
-      - tor-network
-    expose:
-      - "8118"
-  tor8:
-    image: dperson/torproxy
-    networks:
-      - tor-network
-    expose:
-      - "8118"
-  tor9:
-    image: dperson/torproxy
-    networks:
-      - tor-network
-    expose:
-      - "8118"
+  tor1: *tor
+  tor2: *tor
+  tor3: *tor
+  tor4: *tor
+  tor5: *tor
+  tor6: *tor
+  tor7: *tor
+  tor8: *tor
+  tor9: *tor
 
 networks:
   tor-network:
